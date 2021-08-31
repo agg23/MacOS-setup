@@ -6,7 +6,7 @@
 . config/user.sh
 
 # install homebrew apps repositories manager
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # install non-AppStore apps
 echo "Installing non-App Store apps"
@@ -37,7 +37,7 @@ git config --global user.name $gitName
 echo "Cleaning up"
 brew update
 brew upgrade
-brew cask upgrade
+brew upgrade --cask
 brew cleanup
 rm -rf ~/Library/Caches/Homebrew
 
