@@ -1,0 +1,101 @@
+{
+  "title": "Agg23's Razer Mouse modifications",
+  "rules": [
+    {
+      "description": "Remap CMD + W",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 5426,
+                  "product_id": 103,
+                  "description": "Razer Naga Trinity"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap Browser Back",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": ["left_alt"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 5426,
+                  "product_id": 103,
+                  "description": "Razer Naga Trinity"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap Browser Forward",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": ["left_alt"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 5426,
+                  "product_id": 103,
+                  "description": "Razer Naga Trinity"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

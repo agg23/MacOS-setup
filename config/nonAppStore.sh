@@ -8,10 +8,11 @@ nonAppStoreApps=(
     iterm2 # Alternative terminal
     cyberduck # FTP client
 # Video
-    vlc # Most popular cross-platform video watching app
+    iina
     keka # Rar extractor
 # Utility
     alfred
+    karabiner-elements
 # QuickLook plugins
     qlcolorcode
     qlstephen

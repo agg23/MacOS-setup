@@ -1,0 +1,1 @@
+cp assets/razermouse.json ~/.config/karabiner/assets/complex_modifications/razermouse.json

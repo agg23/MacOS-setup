@@ -44,4 +44,6 @@ rm -rf ~/Library/Caches/Homebrew
 # As we installed homebrew before xcode, we need to switch to Xcode Command Line Tools
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+. config/assets.sh
+
 . config/system.sh
