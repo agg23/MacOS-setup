@@ -4,4 +4,6 @@ appStoreApps=(
     409203825 # Numbers (Apple's spreadsheets editor)
     409183694 # Keynote (Apple's presentations editor)
     425424353 # The Unarchiver (Archives extractor)
+    1107421413 # 1Blocker
+    1352778147 # Bitwarden
 )

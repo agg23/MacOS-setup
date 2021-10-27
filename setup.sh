@@ -10,7 +10,7 @@
 
 # install non-AppStore apps
 echo "Installing non-App Store apps"
-brew cask install ${nonAppStoreApps[@]}
+brew install --cask ${nonAppStoreApps[@]}
 
 # Install AppStore CLI installer
 brew install mas
@@ -29,9 +29,19 @@ cp -R /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/. /Li
 echo "Installing brew packages"
 brew install ${brewPackages[@]}
 
+# As we installed homebrew before xcode, we need to switch to Xcode Command Line Tools
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
 # Configure git
 git config --global user.email $gitEmail
 git config --global user.name $gitName
+
+# Use VSCode as a git editor, for difftool and mergetool
+ git config --global core.editor "code --wait"
+ git config --global merge.tool "vscode"
+ git config --global mergetool.vscode.cmd "code --wait \$MERGED"
+ git config --global diff.tool "vscode"
+ git config --global difftool.vscode.cmd "code --wait --diff \$LOCAL \$REMOTE"
 
 # Update installed apps and clear caches
 echo "Cleaning up"
@@ -40,9 +50,6 @@ brew upgrade
 brew upgrade --cask
 brew cleanup
 rm -rf ~/Library/Caches/Homebrew
-
-# As we installed homebrew before xcode, we need to switch to Xcode Command Line Tools
-sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 . config/assets.sh
 

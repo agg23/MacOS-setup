@@ -1,12 +1,13 @@
 dockIcons=(
     /Applications/Safari.app/
-    /Applications/Firefox.app/
     /System/Applications/Mail.app/
     /System/Applications/Messages.app/
+    /Applications/Discord.app/
     /System/Applications/Calendar.app/
-    /System/Applications/Music.app/
+    /Applications/Roon.app/
+    "/Applications/App Store.app/"
     "/System/Applications/System Preferences.app/"
     /Applications/iTerm.app/
-    /Applications/Xcode.app/
     "/Applications/Visual Studio Code.app/"
+    /Applications/Xcode.app/
 )
